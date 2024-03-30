@@ -1,7 +1,0 @@
-
-
-    @{
-        "applicationId" = "b94b04ea-38a8-4283-94df-1be554fb61d2"
-        "subscriptionId" = "16c522c6-fd47-4f66-add1-276a7cf2c33b"
-        "tenantId" = "0c92856a-47df-4de2-9ea0-57bdb6c2a9ad"
-    }
