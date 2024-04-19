@@ -44,6 +44,11 @@ function New-MyAzKeyVault() {
     $test = . ("C:\Users\t983902\OneDrive - Telenor\Code\GitHub\Powershell\Azure\Get-PublicIP.ps1")$PublicIP
     . C:\Functions\Get-IpAddress.ps1
     
+
+    $ScriptFromGitHub = Invoke-WebRequest https://raw.githubusercontent.com/Alvin1978/Powershell/main/Azure/Get-PublicIP.ps1
+    Invoke-Expression $($ScriptFromGitHub.Content)
+
+
     # Create a Resource Group
     # Check if Resource Group already exists
     try {
@@ -108,3 +113,14 @@ Get-Content $variablesPath | Foreach-Object {
 }
 
 New-MyAzKeyVault -variables $variables
+
+
+# Get Public IP adress from GitHub.
+<#
+https://github.com/Alvin1978/Powershell/blob/main/Azure/Get-PublicIP.ps1
+https://raw.githubusercontent.com/Alvin1978/Powershell/main/Azure/Get-PublicIP.ps1
+
+$ScriptFromGitHub = Invoke-WebRequest https://raw.githubusercontent.com/Alvin1978/Powershell/main/Azure/Get-PublicIP.ps1
+Invoke-Expression $($ScriptFromGitHub.Content)
+
+#>
